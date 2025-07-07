@@ -1,0 +1,27 @@
+@import url('./variables.css');
+
+.glass-handle {
+    stroke: var(--border);
+    stroke-width: 2;
+}
+
+.glass {
+    fill: var(--bg-dark);
+    stroke: var(--border);
+    stroke-width: 2;
+}
+
+
+.navigation-lines{
+    fill: var(--bg-light);
+    stroke: var(--border);
+    stroke-width: 1;
+}
+
+.svg-holder{
+    width: min(100px, 4vw);
+    height: min(100px, 4vw);
+    flex-shrink: 3;
+    flex-grow: 1;
+}
+

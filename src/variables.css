@@ -1,0 +1,232 @@
+:root {
+    --bg-dark: hsl(0 0% 90%);
+    --bg: hsl(300 0% 95%);
+    --bg-light: hsl(300 50% 100%);
+    --bg-grad: linear-gradient(70deg, var(--bg-dark) 30%, var(--bg-light) 60%);
+
+    --text: hsl(300 0% 4%);
+    --text-muted: hsl(0 0% 28%);
+
+    --highlight: hsl(300 50% 100%);
+    --highlight-grad: linear-gradient(7deg, var(--highlight) 0%, var(--bg-dark) 60%);
+
+    --border: hsl(340 0% 50%);
+    --border-muted: hsl(340 0% 62%);
+
+    --primary: hsl(318 38% 30%);
+    --secondary: hsl(160 100% 13%);
+    --danger: hsl(9 21% 41%);
+    --warning: hsl(52 23% 34%);
+    --success: hsl(147 19% 36%);
+    --info: hsl(217 22% 41%);
+}
+
+.dark-default {
+    --bg-dark: hsl(336 0% 1%);
+    --bg: hsl(300 0% 4%);
+    --bg-light: hsl(0 0% 9%);
+    --bg-grad: linear-gradient(70deg, var(--bg-dark) 30%, var(--bg-light) 60%);
+
+    --text: hsl(300 0% 95%);
+    --text-muted: hsl(300 0% 69%);
+
+    --highlight: hsl(330 0% 39%);
+    --highlight-grad: linear-gradient(7deg, var(--highlight) 0%, var(--bg-dark) 60%);
+
+    --border: hsl(0 0% 28%);
+    --border-muted: hsl(300 0% 18%);
+
+    --primary: hsl(320 50% 73%);
+    --secondary: hsl(149 41% 62%);
+    --danger: hsl(9 26% 64%);
+    --warning: hsl(52 19% 57%);
+    --success: hsl(146 17% 59%);
+    --info: hsl(217 28% 65%);
+}
+
+.light-alt{
+    --bg-dark: hsl(0 0% 90%);
+    --bg: hsl(300 0% 95%);
+    --bg-light: hsl(300 50% 100%);
+    --bg-grad: linear-gradient(70deg, var(--bg-dark) 30%, var(--bg-light) 60%);
+
+    --text: hsl(300 0% 4%);
+    --text-muted: hsl(0 0% 28%);
+
+    --highlight: hsl(300 50% 100%);
+    --highlight-grad: linear-gradient(7deg, var(--highlight) 0%, var(--bg-dark) 60%);
+
+    --border: hsl(340 0% 50%);
+    --border-muted: hsl(340 0% 62%);
+
+    --primary: hsl(191 100% 14%);
+    --secondary: hsl(18 68% 27%);
+    --danger: hsl(9 21% 41%);
+    --warning: hsl(52 23% 34%);
+    --success: hsl(147 19% 36%);
+    --info: hsl(217 22% 41%);
+}
+
+.dark-alt{
+    --bg-dark: hsl(336 0% 1%);
+    --bg: hsl(300 0% 4%);
+    --bg-light: hsl(0 0% 9%);
+    --bg-grad: linear-gradient(70deg, var(--bg-dark) 30%, var(--bg-light) 60%);
+
+    --text: hsl(300 0% 95%);
+    --text-muted: hsl(300 0% 69%);
+
+    --highlight: hsl(330 0% 39%);
+    --highlight-grad: linear-gradient(7deg, var(--highlight) 0%, var(--bg-dark) 60%);
+
+    --border: hsl(0 0% 28%);
+    --border-muted: hsl(300 0% 18%);
+
+    --primary: hsl(195 66% 63%);
+    --secondary: hsl(17 69% 70%);
+    --danger: hsl(9 26% 64%);
+    --warning: hsl(52 19% 57%);
+    --success: hsl(146 17% 59%);
+    --info: hsl(217 28% 65%);
+}
+
+.light-blue{
+    --bg-dark: hsl(215 34% 90%);
+    --bg: hsl(215 74% 96%);
+    --bg-light: hsl(215 100% 100%);
+    --bg-grad: linear-gradient(70deg, var(--bg-dark) 30%, var(--bg-light) 60%);
+
+    --text: hsl(217 72% 5%);
+    --text-muted: hsl(214 18% 29%);
+
+    --highlight: hsl(215 100% 100%);
+    --highlight-grad: linear-gradient(7deg, var(--highlight) 0%, var(--bg-dark) 60%);
+
+    --border: hsl(215 12% 52%);
+    --border-muted: hsl(215 17% 64%);
+
+    --primary: hsl(214 60% 30%);
+    --secondary: hsl(41 100% 16%);
+    --grad: linear-gradient(0deg, var(--primary) 0%, var(--secondary) 100%);
+    --danger: hsl(9 21% 41%);
+    --warning: hsl(52 23% 34%);
+    --success: hsl(147 19% 36%);
+    --info: hsl(217 22% 41%);
+}
+
+.dark-blue {
+    --bg-dark: hsl(220 63% 2%);
+    --bg: hsl(215 41% 5%);
+    --bg-light: hsl(214 24% 9%);
+    --bg-grad: linear-gradient(0deg, var(--bg-dark) 0%, var(--bg-light) 100%);
+
+    --text: hsl(215 100% 96%);
+    --text-muted: hsl(215 21% 71%);
+
+    --highlight: hsl(214 14% 40%);
+    --highlight-grad: linear-gradient(7deg, var(--highlight) 0%, var(--bg-dark) 60%);
+
+    --border: hsl(214 18% 29%);
+    --border-muted: hsl(214 26% 19%);
+
+    --primary: hsl(214 78% 73%);
+    --secondary: hsl(36 58% 62%);
+    --grad: linear-gradient(0deg, var(--primary) 0%, var(--secondary) 100%);
+    --danger: hsl(9 26% 64%);
+    --warning: hsl(52 19% 57%);
+    --success: hsl(146 17% 59%);
+    --info: hsl(217 28% 65%);
+}
+
+.light-green{
+    --bg-dark: hsl(151 33% 88%);
+    --bg: hsl(151 57% 93%);
+    --bg-light: hsl(151 100% 98%);
+    --bg-grad: linear-gradient(70deg, var(--bg-dark) 30%, var(--bg-light) 60%);
+
+    --text: hsl(151 100% 2%);
+    --text-muted: hsl(155 29% 24%);
+
+    --highlight: hsl(151 100% 96%);
+    --highlight-grad: linear-gradient(7deg, var(--highlight) 0%, var(--bg-dark) 60%);
+
+    --border: hsl(153 16% 47%);
+    --border-muted: hsl(152 18% 59%);
+
+    --primary: hsl(164 100% 12%);
+    --secondary: hsl(323 40% 30%);
+    --danger: hsl(9 21% 41%);
+    --warning: hsl(52 23% 34%);
+    --success: hsl(147 19% 36%);
+    --info: hsl(217 22% 41%);
+}
+
+.dark-green {
+    --bg-dark: hsl(150 100% 1%);
+    --bg: hsl(151 73% 3%);
+    --bg-light: hsl(155 43% 7%);
+    --bg-grad: linear-gradient(70deg, var(--bg-dark) 30%, var(--bg-light) 60%);
+
+    --text: hsl(152 92% 91%);
+    --text-muted: hsl(152 23% 66%);
+
+    --highlight: hsl(153 21% 35%);
+    --highlight-grad: linear-gradient(7deg, var(--highlight) 0%, var(--bg-dark) 60%);
+
+    --border: hsl(155 29% 24%);
+    --border-muted: hsl(157 53% 14%);
+
+    --primary: hsl(155 43% 60%);
+    --secondary: hsl(326 53% 73%);
+    --danger: hsl(9 26% 64%);
+    --warning: hsl(52 19% 57%);
+    --success: hsl(146 17% 59%);
+    --info: hsl(217 28% 65%);
+}
+
+.light-red{
+    --bg-dark: hsl(2 54% 92%);
+    --bg: hsl(2 100% 97%);
+    --bg-light: hsl(2 100% 100%);
+    --bg-grad: linear-gradient(70deg, var(--bg-dark) 30%, var(--bg-light) 60%);
+
+    --text: hsl(356 86% 6%);
+    --text-muted: hsl(0 23% 31%);
+
+    --highlight: hsl(2 100% 100%);
+    --highlight-grad: linear-gradient(7deg, var(--highlight) 0%, var(--bg-dark) 60%);
+
+    --border: hsl(1 17% 53%);
+    --border-muted: hsl(1 24% 65%);
+
+    --primary: hsl(357 44% 32%);
+    --secondary: hsl(183 100% 9%);
+    --danger: hsl(9 21% 41%);
+    --warning: hsl(52 23% 34%);
+    --success: hsl(147 19% 36%);
+    --info: hsl(217 22% 41%);
+}
+
+.dark-red {
+    --bg-dark: hsl(359 74% 2%);
+    --bg: hsl(360 49% 5%);
+    --bg-light: hsl(0 30% 10%);
+    --bg-grad: linear-gradient(70deg, var(--bg-dark) 30%, var(--bg-light) 60%);
+
+    --text: hsl(2 100% 98%);
+    --text-muted: hsl(1 31% 73%);
+
+    --highlight: hsl(1 18% 42%);
+    --highlight-grad: linear-gradient(7deg, var(--highlight) 0%, var(--bg-dark) 60%);
+
+    --border: hsl(0 23% 31%);
+    --border-muted: hsl(360 32% 20%);
+
+    --primary: hsl(0 66% 75%);
+    --secondary: hsl(183 52% 57%);
+    --danger: hsl(9 26% 64%);
+    --warning: hsl(52 19% 57%);
+    --success: hsl(146 17% 59%);
+    --info: hsl(217 28% 65%);
+}
+

@@ -1,0 +1,135 @@
+/* This file is for the grids and formats ideally */
+@import url('./variables.css');
+@import url('./navigation.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+ 
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    background: var(--bg-grad);
+    background-repeat: no-repeat;
+    color: var(--text);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.horizontal-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: min(15px, 0.1rem);
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1vw;
+}
+
+.nowrap-horizontal-flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: min(15px, 0.1rem);
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.vertical-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: min(15px, 0.1rem);
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: stretch;
+    gap: 1vw;
+}
+
+.container {
+    border-radius: 10rem;
+    outline: 2px solid var(--border-muted);
+    padding-left: min(1.5vw, 150px);
+    padding-right: min(1.5vw, 150px);
+    margin-top: min(0.5vw, 110px);
+    margin-bottom: min(0.5vw, 110px);
+}
+
+.container:hover {
+    outline: 2px solid var(--border);
+    background: var(--highlight-grad);
+}
+
+.md{
+    margin: 2.5%;
+}
+
+.pd{
+    padding: 2.5%;
+}
+
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-container:hover{
+    cursor: pointer;
+    .container {
+        border: var(--border);
+        background: var(--highlight-grad);
+    }
+    .dropdown-appear{
+        display: block;
+    }
+}
+
+.dropdown-appear{
+    position: absolute;
+    top: 100%;
+    z-index: 10;
+    display: none;
+    background: var(--primary);
+    padding: 1vw;
+    width: 80%;
+    border-radius: 2vw;
+    text-align: center;
+}
+
+.dropdown-appear li {
+    list-style: none;
+    margin: 10%;
+    border-radius: 5rem;
+}
+
+.dropdown-appear li:hover{
+    background: var(--secondary);
+    outline: 2px solid var(--border-muted);
+}
+.dropdown-appear a {
+    text-decoration: none;
+    color: var(--bg-dark);
+}
+
+.color-preview {
+    border-radius: 100%;
+}
+
+.side-padded{
+    padding-right: 1vw;
+    padding-left: 1vw;
+}
+
+.seemless-button {
+    border: none; /* Remove all borders */
+    outline: none; /* Remove outline (e.g., focus ring) */
+    background: none; /* Remove default background */
+    cursor: pointer; /* Keep pointer cursor for interactivity */
+    align-items: center; /* Center content vertically */
+    color: var(--bg-dark);
+}
