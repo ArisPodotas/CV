@@ -1,5 +1,8 @@
 /**
  * This function is for avoiding repetition and improving extensibility in the them picker menu
+ * @param {string} props.text 
+ * @param {string} props.color 
+ * @returns a button that applies a theme
  */
 function ThemePickDisplay({text, color}) {
     const themes = [
@@ -14,7 +17,8 @@ function ThemePickDisplay({text, color}) {
         'light-red',
         'dark-red'
     ];
-    // Fuction to apply the theme
+    /** Fuction to apply the theme
+     */
     function applyTheme() {
         themes.forEach((theme) => {
             document.body.classList.remove(theme);
@@ -37,7 +41,7 @@ function ThemePickDisplay({text, color}) {
 
 /**
 * Creates a button that picks the theme
-* @returns a div with the button and an image
+* @returns a div with the button containing multiple theme choices in a dropdown
 */
 function ThemePicker() {
     return(
@@ -72,6 +76,7 @@ function ThemePicker() {
 
 /**
 * Creates a searchbar for the navigation bar
+* @returns A button that when clicked will have a text box with a fuzzy finder within it
 */
 function SearchBar() {
     return(
@@ -89,6 +94,7 @@ function SearchBar() {
 
 /**
 * Makes the Navigation menu for the navbar
+* @returns A button that contains a dropdown with links to places in the document
 */
 function Navigation() {
     return(
@@ -116,6 +122,7 @@ function Navigation() {
 
 /**
 * Adds components as a nav bar (is the nav bar itself)
+* @returns A horizontal flex container with a navigation-search-themePicker button
 */
 export default function NavBar () {
     return(

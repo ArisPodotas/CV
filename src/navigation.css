@@ -11,7 +11,6 @@
     stroke-width: 2;
 }
 
-
 .navigation-lines{
     fill: var(--bg-light);
     stroke: var(--border);
@@ -19,8 +18,8 @@
 }
 
 .svg-holder{
-    width: min(100px, 4vw);
-    height: min(100px, 4vw);
+    width: clamp(20px, 2.5vw, 1000px);
+    height: clamp(20px, 2.5vw, 1000px);
     flex-shrink: 3;
     flex-grow: 1;
 }

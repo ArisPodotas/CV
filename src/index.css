@@ -11,7 +11,17 @@
     box-sizing: border-box;
 }
 
+html{
+    height: 100%;
+    background-color: var(--bg-dark);
+    background: var(--bg-grad);
+    background-repeat: no-repeat;
+    color: var(--text);
+    margin: 0;
+}
+
 body {
+    height: 100%;
     background-color: var(--bg-dark);
     background: var(--bg-grad);
     background-repeat: no-repeat;
@@ -20,7 +30,24 @@ body {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    font-size: clamp(10px, 1.5vw, 500px);
 }
+
+img {
+    border-radius: clamp(10px, 5vw, 100px);
+    width: min(20%, 350px);
+    height: min(20%, 350px);
+}
+
+hr{
+    background-color: var(--text-muted);
+    border-color: var(--text-muted);
+    color: var(--text-muted);
+}
+
+/* h3 h1 { */
+/*     font-size: clamp(10px, 1.5vw, 500px); */
+/* } */
 
 .horizontal-flex-container {
     display: flex;
@@ -50,20 +77,6 @@ body {
     align-items: center;
     align-content: stretch;
     gap: 1vw;
-}
-
-.container {
-    border-radius: 10rem;
-    outline: 2px solid var(--border-muted);
-    padding-left: min(1.5vw, 150px);
-    padding-right: min(1.5vw, 150px);
-    margin-top: min(0.5vw, 110px);
-    margin-bottom: min(0.5vw, 110px);
-}
-
-.container:hover {
-    outline: 2px solid var(--border);
-    background: var(--highlight-grad);
 }
 
 .md{
@@ -111,6 +124,7 @@ body {
     background: var(--secondary);
     outline: 2px solid var(--border-muted);
 }
+
 .dropdown-appear a {
     text-decoration: none;
     color: var(--bg-dark);
@@ -126,10 +140,53 @@ body {
 }
 
 .seemless-button {
-    border: none; /* Remove all borders */
-    outline: none; /* Remove outline (e.g., focus ring) */
-    background: none; /* Remove default background */
-    cursor: pointer; /* Keep pointer cursor for interactivity */
-    align-items: center; /* Center content vertically */
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: clamp(10px, 1.5vw, 500px);
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    align-items: center;
     color: var(--bg-dark);
+}
+
+.card{
+    border-radius: clamp(10px, 5vw, 100px);
+    background: var(--bg);
+    margin: clamp(20px, 2.5vw, 200px);
+    padding: clamp(20px, 2.5vw, 200px);
+    outline: 2px solid var(--border-muted);
+}
+
+.card:hover {
+    outline: 2px solid var(--border);
+    background: var(--highlight-grad);
+}
+
+.container {
+    border-radius: 10rem;
+    outline: 2px solid var(--border-muted);
+    background: var(--bg);
+    padding-left: min(1.5vw, 150px);
+    padding-right: min(1.5vw, 150px);
+    margin-top: min(0.5vw, 110px);
+    margin-bottom: min(0.5vw, 110px);
+}
+
+.container:hover {
+    outline: 2px solid var(--border);
+    background: var(--highlight-grad);
+}
+
+.growing-hr {
+    display: none;
+}
+
+.growing-hr-trigger:hover{
+    .growing-hr{
+        display: block;
+    }
 }
