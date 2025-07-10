@@ -11,8 +11,8 @@ createRoot(document.getElementById('root')).render(
     <StrictMode>
         <NavBar/>
         <About/>
-        <Chart/>
         <ProjectGrid/>
+        <Chart/>
         <Footer/>
     </StrictMode>,
 )

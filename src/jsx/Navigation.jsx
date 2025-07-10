@@ -96,7 +96,7 @@ function SearchBar() {
 * Makes the Navigation menu for the navbar
 * @returns A button that contains a dropdown with links to places in the document
 */
-function Navigation() {
+function Navigation({children}) {
     return(
         <div className = 'dropdown-container'>
             <div className = 'horizontal-flex-container container'>
@@ -111,9 +111,7 @@ function Navigation() {
             </div>
             <nav className = 'horizontal-flex-container'>
                 <ul className = 'dropdown-appear'>
-                    <li><a href = '#'>About</a></li>
-                    <li><a href = '#'>Projects</a></li>
-                    <li><a href = '#'>Citations</a></li>
+                    {children}
                 </ul>
             </nav>
         </div>
@@ -121,14 +119,28 @@ function Navigation() {
 }
 
 /**
+ * Creates a tags in a li tag to simulate links
+ */
+function Link({text}) {
+    return(
+        <li><a href = {'#' + text.toLowerCase()}>{text}</a></li>
+    );
+}
+
+/**
 * Adds components as a nav bar (is the nav bar itself)
 * @returns A horizontal flex container with a navigation-search-themePicker button
 */
-export default function NavBar () {
+export default function NavBar ({children}) {
     return(
         <header className = ''>
             <div className = 'horizontal-flex-container' id = 'navigation-bar' style = {{justifyContent: 'space-around'}}>
-                <Navigation/>
+                <Navigation>
+                    <Link text = 'About'/>
+                    <Link text = 'Projects'/>
+                    <Link text = 'Chart'/>
+                    <Link text = 'Citations'/>
+                </Navigation>
                 <SearchBar/>
                 <ThemePicker/>
             </div>

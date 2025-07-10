@@ -1,3 +1,4 @@
+import Section from './Section.jsx'
 
 function DisplayPdf(params) {
     
@@ -16,9 +17,11 @@ function ProjectTile(params) {
 
 export default function ProjectGrid (params) {
     return(
-        <div>
-            <ProjectCard/>
-        </div>
+        <Section>
+            <div>
+                <ProjectCard/>
+            </div>
+        </Section>
     );
 }
 
