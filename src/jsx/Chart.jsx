@@ -893,42 +893,47 @@ const data = [
 {"Day":894,"Weight":91.3},
 ];
 
+// I'm using a separate script where the data is generated to write it to this file
 import Section from './Section'
 import * as d3 from 'd3'
-import {useEffect} from 'react'
+import {useMemo, useRef, useEffect} from 'react'
 
-export default function Chart() {
-    // useEffect(() => {
-    //     const x = d3.scaleLinear().domain([0, d3.max(data, d => d.Day)]).range([0, 100]);
-    //     const y = d3.scaleLinear().domain([68, d3.max(data, d => d.Weight)]).range([100, 0]);
-    //     const svg = d3.select('.chart-holder')
-    //     .append('g')
-    //     .attr('width', 'min(100px, 100%)')
-    //     .attr('height', '100%')
-    //     svg.append("g")
-    //         .call(d3.axisBottom(x))
-    //         .attr('transform', 'translate(0, 100)')
-    //         .attr('stroke', 'var(--primary)');
-    //     svg.append("g")
-    //         .call(d3.axisLeft(y))
-    //         .attr('stroke', 'var(--primary)');
-    //     const line = d3.line().x(d => x(d.Day)).y(d => y(d.Weight));
-    //     svg.append("path").datum(data)
-    //         .attr("fill", "none")
-    //         .attr("stroke", "var(--primary)")
-    //         .attr("stroke-width", 1)
-    //         .attr("d", line);
-    //     return(() => {svg.remove()});
-    // }, []);
-    const x = d3.scaleLinear().domain([0, d3.max(data, d => d.Day)]).range([0, 100]);
-    const y = d3.scaleLinear().domain([68, d3.max(data, d => d.Weight)]).range([100, 0]);
-    const line = d3.line((d, i) => x(i), y);
+export default function Chart(
+    {
+        scaler = {
+            width: 500,
+            height: 500,
+            leftMargin: 10,
+            rightMargin: 10,
+            topMargin: 10,
+            bottomMargin: 10
+        }
+    }
+)
+{
+    const gx = useRef();
+    const gy = useRef();
+    const ref = useRef();
+    const x = d3.scaleLinear([0, 100]).domain([0, d3.max(data, d => d.Day)]);
+    const y = d3.scaleLinear([100, 0]).domain([68, d3.max(data, d => d.Weight)]);
+    useEffect(() => void d3.select(gx.current).call(d3.axisBottom(x)), [gx, x]);
+    useEffect(() => void d3.select(gy.current).call(d3.axisLeft(y)), [gy, y]);
+    useEffect(() => {
+        const svgElement = d3.select(ref.current);
+    }, [])
     return(
         <Section>
             <div className = 'card' style = {{flexGrow: 3, flexShrink: 1}}>
-                <svg className = 'chart-holder' width = '100%' height = '100%'>
-                    <path d={line(data)}/>
-                    <g/>
+                <svg className = 'chart-holder' ref = {ref} viewBox = '0 0 100 100'>
+                    <g ref = {gx} transform='translate()'></g>
+                    <g ref = {gy} transform='translate()'></g>
+                    {
+                        data.map(
+                            (x, y) => {
+                                (<line x1 = {10} y1 = {10} x2 = {20} y2 = {20}/>)
+                            }
+                        )
+                    }
                 </svg>
             </div>
             <div className = 'card details descriptor' style = {{flexGrow: 1, flexShrink: 3}}>

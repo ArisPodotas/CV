@@ -1,4 +1,3 @@
-import '../About.css'
 import Section from './Section.jsx'
 import Image from '../../../../Documents/Paperwork/IMG_1212x.jpg'
 

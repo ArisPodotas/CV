@@ -1,0 +1,39 @@
+/* This file is to help de clog the index file by moving all on hover effect to another file and import them */
+
+.dropdown-container:hover{
+    cursor: pointer;
+    .container {
+        border: var(--border);
+        background: var(--highlight-grad);
+        transform: translateY(0.1rem);
+    }
+    .dropdown-appear{
+        display: block;
+        transform: translateY(0.1rem);
+    }
+}
+
+.dropdown-appear li:hover{
+    background: var(--secondary);
+    outline: 2px solid var(--border-muted);
+    transform: translateY(0.1rem);
+}
+
+.card:hover {
+    outline: 2px solid var(--border);
+    background: var(--highlight-grad);
+    transform: translateY(0.1rem);
+}
+
+.container:hover {
+    outline: 2px solid var(--border);
+    background: var(--highlight-grad);
+    transform: translateY(0.1rem);
+}
+
+.growing-hr-trigger:hover{
+    .growing-hr{
+        display: block;
+    }
+}
+

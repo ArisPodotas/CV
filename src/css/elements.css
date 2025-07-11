@@ -1,0 +1,40 @@
+
+html{
+    height: 100%;
+    background-color: var(--bg-dark);
+    background: var(--bg-grad);
+    background-repeat: no-repeat;
+    color: var(--text);
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    background-color: var(--bg-dark);
+    background: var(--bg-grad);
+    background-repeat: no-repeat;
+    color: var(--text);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: clamp(10px, 1.5vw, 500px);
+}
+
+img {
+    border-radius: clamp(10px, 5vw, 100px);
+    width: min(20%, 350px);
+    height: min(20%, 350px);
+}
+
+hr{
+    background-color: var(--text-muted);
+    border-color: var(--text-muted);
+    color: var(--text-muted);
+}
+
+h3 h1 {
+    font-size: clamp(10px, 1.5vw, 500px);
+    font-family: inherit;
+}
+
