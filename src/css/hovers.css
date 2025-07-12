@@ -5,30 +5,30 @@
     .container {
         border: var(--border);
         background: var(--highlight-grad);
-        transform: translateY(0.1rem);
+        transform: translateY(0.3vh);
     }
     .dropdown-appear{
         display: block;
-        transform: translateY(0.1rem);
+        transform: translateY(0.3vh);
     }
 }
 
 .dropdown-appear li:hover{
     background: var(--secondary);
     outline: 2px solid var(--border-muted);
-    transform: translateY(0.1rem);
+    transform: translateY(0.3vh);
 }
 
 .card:hover {
     outline: 2px solid var(--border);
     background: var(--highlight-grad);
-    transform: translateY(0.1rem);
+    transform: translateY(0.3vh);
 }
 
 .container:hover {
     outline: 2px solid var(--border);
     background: var(--highlight-grad);
-    transform: translateY(0.1rem);
+    transform: translateY(0.3vh);
 }
 
 .growing-hr-trigger:hover{
